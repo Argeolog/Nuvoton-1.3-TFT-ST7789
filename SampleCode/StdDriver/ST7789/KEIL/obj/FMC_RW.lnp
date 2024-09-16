@@ -1,0 +1,30 @@
+--cpu=Cortex-M23
+".\obj\system_m251.o"
+".\obj\startup_m251.o"
+".\obj\main.o"
+".\obj\shell.o"
+".\obj\getopt.o"
+".\obj\m251_hal_msp.o"
+".\obj\m251_it.o"
+".\obj\retarget.o"
+".\obj\clk.o"
+".\obj\uart.o"
+".\obj\sys.o"
+".\obj\fmc.o"
+".\obj\timer.o"
+".\obj\i2c.o"
+".\obj\spi.o"
+".\obj\gpio.o"
+".\obj\driver_st7789_1.o"
+".\obj\m251_driver_st7789_interface_1.o"
+".\obj\driver_st7789_display_test_1.o"
+".\obj\driver_st7789_basic_1.o"
+".\obj\wire_1.o"
+".\obj\clock_1.o"
+".\obj\delay_1.o"
+".\obj\spi2_1.o"
+".\obj\uart2_1.o"
+--library_type=microlib --ro-base 0x00000000 --entry 0x00000000 --rw-base 0x20000000 --entry Reset_Handler --first __Vectors --strict
+--map --first='startup_M251.o(RESET)' --datacompressor=off --info=inline --entry Reset_Handler --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\lst\FMC_RW.map" -o .\obj\FMC_RW.axf
